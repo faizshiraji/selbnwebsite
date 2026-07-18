@@ -1,0 +1,12 @@
+    <style>
+
+        .navbar,
+        .navbar-nav {
+            overflow: visible !important; /* allow dropdown overflow */
+        }
+
+        .dropdown-menu {
+            max-width: 95vw; /* prevent horizontal scroll on small screens */
+        }
+
+    </style>

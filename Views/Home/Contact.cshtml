@@ -1,0 +1,134 @@
+﻿@{
+    Layout = "";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Webcam Capture Example</title>
+
+    <style>
+
+        body {
+            font-family: Arial;
+            margin: 30px;
+        }
+
+        video {
+            width: 500px;
+            border: 1px solid #999;
+        }
+
+        canvas {
+            display: none;
+        }
+
+        img {
+            width: 500px;
+            border: 1px solid #999;
+            margin-top: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h2>Visitor Camera</h2>
+
+    <video id="video" autoplay playsinline></video>
+
+    <br>
+
+    <button id="btnStart">Start Camera</button>
+
+    <button id="btnCapture">Capture</button>
+
+    <button id="btnStop">Stop Camera</button>
+
+    <br><br>
+
+    <canvas id="canvas"></canvas>
+
+    <h3>Captured Image</h3>
+
+    <img id="photo" />
+
+    <script>
+
+let video = document.getElementById("video");
+let canvas = document.getElementById("canvas");
+let photo = document.getElementById("photo");
+
+let stream = null;
+
+// Start Camera
+document.getElementById("btnStart").onclick = async function () {
+
+    try {
+
+        stream = await navigator.mediaDevices.getUserMedia({
+
+            video: true,
+            audio: false
+
+        });
+
+        video.srcObject = stream;
+
+    }
+    catch (err) {
+
+        alert("Cannot access camera.");
+
+        console.log(err);
+
+    }
+
+};
+
+// Capture Image
+document.getElementById("btnCapture").onclick = function () {
+
+    if(video.videoWidth==0)
+    {
+        alert("Camera not started.");
+        return;
+    }
+
+    canvas.width = video.videoWidth;
+    canvas.height = video.videoHeight;
+
+    let ctx = canvas.getContext("2d");
+
+    ctx.drawImage(video,0,0);
+
+    let image = canvas.toDataURL("image/jpeg");
+
+    photo.src = image;
+
+};
+
+// Stop Camera
+document.getElementById("btnStop").onclick = function(){
+
+    if(stream!=null){
+
+        stream.getTracks().forEach(track => track.stop());
+
+        video.srcObject=null;
+
+    }
+
+};
+
+    </script>
+
+</body>
+</html>

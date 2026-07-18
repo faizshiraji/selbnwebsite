@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Prevent crawling of ASP.NET system folders
+Disallow: /bin/
+Disallow: /App_Data/
+
+# Prevent crawling of error pages (if they exist)
+Disallow: /Error/
+Disallow: /Account/
+
+# Sitemap
+Sitemap: https://selbn.com/sitemap.xml

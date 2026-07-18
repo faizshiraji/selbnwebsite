@@ -1,0 +1,160 @@
+﻿@model IEnumerable<SEL_Web_Site.PABX>
+
+@{
+    ViewBag.Title = "Index";
+
+
+
+}
+
+
+<!-- Masthead-->
+<header class="masthead">
+    <div class="container">
+        @*<div class="masthead-subheading">Welcome To System Engineering Limited</div>*@
+        <div class="masthead-heading text-uppercase">PABX Number</div>
+
+    </div>
+</header>
+
+
+
+<!-- Services-->
+<section class="page-section" id="services">
+    <div class="container">
+        @*<div class="text-center">
+                <h2 class="section-heading text-uppercase">PABX Number</h2>
+
+            </div>*@
+        <div class="row text-center">
+            @*<div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="my-3">E-Commerce</h4>
+                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="my-3">Responsive Design</h4>
+                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                </div>
+                <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="my-3">Web Security</h4>
+                    <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                </div>*@
+
+
+            @*<p>
+                    @Html.ActionLink("Create New", "Create")
+                </p>*@
+
+            @*<div class="mb-3 align-content-end" style="text-align:right;">
+                    <input style="width:400px;" class="form-control" type="text" id="searchInput" placeholder="Search...">
+                </div>*@
+
+
+
+<div class="table-responsive">
+<div class="d-flex mb-3">
+<div class="flex-grow-1">
+<!-- Your other content here -->
+
+</div>
+<input style="width:400px;" class="form-control" type="text" id="searchInput" placeholder="Search...">
+</div>
+<table id="PABXdataTable" class="table table-bordered">
+<thead>
+<tr style="background-color:navy; color:white;">
+<th>@Html.DisplayNameFor(model => model.Name)</th>
+<th>@Html.DisplayNameFor(model => model.Designation)</th>
+<th>@Html.DisplayNameFor(model => model.Department)</th>
+<th>@Html.DisplayNameFor(model => model.Floor)</th>
+<th>@Html.DisplayNameFor(model => model.Mobile)</th>
+<th>PABX</th>
+</tr>
+</thead>
+<tbody>
+@{
+List<string> floor = new List<string>();
+floor = Model.OrderBy(t => t.Floor).Select(t => t.Floor).Distinct().ToList();
+}
+
+@foreach (var itemFloor in floor)
+{
+    List<PABX> pabxInThisFloor = Model.Where(t => t.Floor == itemFloor).OrderBy(t => t.PABX1).ToList();
+    <tr>
+        <td style="background-color:darkgray;" colspan="6">@itemFloor Floor</td>
+    </tr>
+    foreach (PABX item in pabxInThisFloor)
+    {
+    <tr>
+        <td>@Html.DisplayFor(modelItem => item.Name)</td>
+        <td>@Html.DisplayFor(modelItem => item.Designation)</td>
+        <td>@Html.DisplayFor(modelItem => item.Department)</td>
+        <td>@Html.DisplayFor(modelItem => item.Floor)</td>
+        <td><span style="letter-spacing: 4px;">@item.Mobile</span></td>
+        <td><span style="letter-spacing: 4px;">@item.PABX1</span></td>
+    </tr>
+    }
+    }
+</tbody></table>
+
+
+
+
+
+    @*@Html.Raw(ViewBag.HtmlTable)*@
+
+
+
+
+
+
+
+</div>
+
+
+        </div>
+    </div>
+</section>
+
+
+
+<script>
+    let debounceTimeout;
+
+    document.getElementById('searchInput').addEventListener('input', function () {
+        const filter = this.value.toLowerCase();
+
+        // Clear the previous timeout if any
+        clearTimeout(debounceTimeout);
+
+        // Set a new timeout
+        debounceTimeout = setTimeout(function () {
+            const rows = document.querySelectorAll('#PABXdataTable tbody tr');
+
+            rows.forEach(row => {
+                const cells = row.getElementsByTagName('td');
+                let found = false;
+                for (let i = 0; i < cells.length; i++) {
+                    if (cells[i].textContent.toLowerCase().includes(filter)) {
+                        found = true;
+                        break;
+                    }
+                }
+                // Smooth transition for row visibility
+                row.style.opacity = found ? '1' : '0';
+                row.style.display = found ? '' : 'none'; // Ensures it's removed from layout
+            });
+        }, 100); // Delay of 300ms
+    });
+</script>

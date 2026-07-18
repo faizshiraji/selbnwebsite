@@ -1,0 +1,520 @@
+﻿
+@{
+    ViewBag.Title = "Test";
+}
+
+
+
+
+@section customCSS
+{
+    <style>
+        section {
+            margin: 0;
+            padding: 10px;
+        }
+
+
+        /* INTRO */
+        .intro {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+
+            .intro h2 {
+                margin-bottom: 15px;
+            }
+
+        /* SOLUTIONS */
+        .solutions-section {
+            max-width: 1200px;
+            margin: 80px auto;
+            padding: 0 20px;
+        }
+
+        /* Headline */
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+            .section-header h2 {
+                font-size: 36px;
+                font-weight: 800;
+                color: #0f4c4c;
+                margin-bottom: 10px;
+            }
+
+            .section-header p {
+                font-size: 16px;
+                color: #555;
+            }
+
+        /* Grid */
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 8px;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 8px;
+        }
+
+        .project-card {
+            height: 340px;
+            border-radius: 18px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .porject-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .porject-card.full {
+            grid-column: 1 / -1;
+        }
+
+        .project-card:hover .overlay {
+            transform: translateY(0);
+        }
+
+        /* Card */
+        .solution-card {
+            position: relative;
+            height: 340px;
+            width: 240px;
+            border-radius: 18px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+            .solution-card img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.5s ease;
+            }
+
+
+
+        /* Overlay */
+        .overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 22px;
+            background: linear-gradient( to top, rgba(0,0,0,0.75), rgba(0,0,0,0) );
+            transform: translateY(35%);
+            transition: transform 0.4s ease;
+        }
+
+        .solution-card:hover .overlay {
+            transform: translateY(0);
+        }
+
+        .overlay h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .overlay p {
+            font-size: 14px;
+            margin-top: 6px;
+            color: rgba(255,255,255,0.9);
+        }
+
+
+
+
+
+        /* TABS */
+        .tabs-container {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .tab-content .grid {
+            display: none;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            padding-top: 30px;
+        }
+
+            .tab-content .grid.active {
+                display: grid;
+            }
+
+        .card {
+            width: 250px;
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+
+            .card:hover {
+                transform: translateY(-6px);
+            }
+
+            .card img {
+                width: 100%;
+                height: 180px;
+                object-fit: cover;
+            }
+
+            .card p {
+                padding: 15px;
+                font-weight: 600;
+            }
+
+        /* remove default bootstrap border */
+        .nav-tabs {
+            border-bottom: none;
+            display: inline-flex;
+            gap: 10px;
+            background: #f3f3f3;
+            padding: 6px;
+            border-radius: 8px;
+        }
+
+            /* nav item fix */
+            .nav-tabs .nav-item {
+                margin-bottom: 0;
+            }
+
+            /* tab button style */
+            .nav-tabs .nav-link {
+                border: none;
+                border-radius: 6px;
+                padding: 10px 18px;
+                background: #e0e0e0;
+                color: #333;
+                font-weight: 600;
+                transition: all 0.25s ease;
+            }
+
+                /* hover */
+                .nav-tabs .nav-link:hover {
+                    background: #3a3a3a;
+                    color: #fff;
+                }
+
+                /* active tab */
+                .nav-tabs .nav-link.active {
+                    background: #222;
+                    color: #fff;
+                }
+    </style>
+
+
+}
+
+
+
+
+<!-- Masthead-->
+<header class="masthead">
+    <div class="container">
+        @*<div class="masthead-subheading">Welcome To SEL</div>*@
+        <div class="masthead-heading text-uppercase">This is Test Page</div>
+
+    </div>
+</header>
+
+<!-- INTRO -->
+<section class="intro">
+    <h2>Real-Time Intelligence for Smarter Operations</h2>
+    <p>
+        SCADA World Ltd. delivers next-gen SCADA solutions engineered to monitor, control, and optimize enterprise-wide processes in real time.
+        From standalone systems to large multi-site plants, our solutions provide complete visibility over equipment, processes, and resources.
+        The result? Faster decision-making, improved operational efficiency, reduced downtime, and lower overall costs—driving measurable growth and profitability.
+    </p>
+</section>
+
+
+
+
+<!-- SOLUTIONS -->
+<section class="solutions-section">
+
+    <!-- Headline -->
+    <div class="section-header">
+        <h2>Industry Solutions</h2>
+        <p>Smart, scalable, and future-ready technologies for modern industries</p>
+    </div>
+
+
+
+
+
+
+    <div class="row">
+
+        <div class="col-md-3 col-lg-3 col-sm-12 mb-3">
+
+            <img src="~/Images/content/automation-Scada-menfectaring.jpg" alt="" width="100%;">
+       
+        </div>
+
+
+        <div class="col-md-3 col-lg-3 col-sm-12 mb-3">
+
+            <img src="~/Images/content/automation-Scada-menfectaring.jpg" alt="" width="100%;">
+
+        </div>
+
+        <div class="col-md-3 col-lg-3 col-sm-12 mb-3">
+
+
+            <img src="~/Images/content/automation-Scada-menfectaring.jpg" alt="" width="100%;">
+        </div>
+
+
+    </div>
+
+
+    <hr>
+
+
+
+
+
+
+
+
+    <!-- Cards -->
+    @*<div class="solutions-grid">
+        <div class="solution-card">
+            <img src="~/Images/content/automation-Scada-menfectaring.jpg" alt="">
+            <div class="overlay">
+                <h3>Industrial Automation Solutions</h3>
+                <p>Smart Automation for Efficient Operations</p>
+            </div>
+        </div>
+
+        <div class="solution-card">
+            <img src="~/Images/content/water-management-system-distribution-system2_SEL.jpg" alt="">
+            <div class="overlay">
+                <h3>SCADA System Design</h3>
+                <p> Real-Time Monitoring, Control, and Visualization</p>
+            </div>
+        </div>
+
+        <div class="solution-card">
+            <img src="~/Images/content/water-management.jpg" alt="">
+            <div class="overlay">
+                <h3>System Integration</h3>
+                <p>Seamless Integration Across Platforms and Devices </p>
+            </div>
+        </div>
+
+        <div class="solution-card">
+            <img src="~/Images/content/water-managent-maintainance.jpg" alt="">
+            <div class="overlay">
+                <h3>Maintenance, Support</h3>
+                <p> Reliable Support for Long-Term Performanc</p>
+            </div>
+        </div>
+
+        <div class="solution-card">
+            <img src="~/Images/content/automation-implementataion.jpg" alt="">
+            <div class="overlay">
+                <h3>Implementation</h3>
+                <p> Reliable Support for Long-Term Performance</p>
+            </div>
+        </div>
+
+    </div>*@
+
+
+
+
+</section>
+
+<!-- Technology Platforms Tabs -->
+<section class="tabs-container">
+    <h3>We deploy globally trusted SCADA platforms tailored to your operational needs, including Siemens Simatic WinCC and LS Info SCADA.</h3>
+
+    <!-- Tabs -->
+
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Pump SCADA</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Smart PRV</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Residential Water Metering</button>
+        </li>
+    </ul>
+
+
+
+
+    @*<div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+            <div class="grid active" id="apps">
+                <div class="card">
+                    <img src="~/Images/content/real-time-monitoring.jpg" alt="">
+                    <p>Real time monitoring</p>
+                </div>
+                <div class="card">
+                    <img src="~/Images/content/pump-scada-monitoring .jpg" alt="">
+                    <p> Fault Diagonstic</p>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+            <div class="grid active" id="apps">
+                <div class="card">
+                    <img src="~/Images/content/smart-prv.jpg" alt="">
+                    <p>Automated pressure regulation </p>
+                </div>
+                <div class="card">
+                    <img src="~/Images/content/smart-prv2.jpg" alt="">
+                    <p>Automated pressure regulation</p>
+                </div>
+
+            </div>
+        </div>
+        <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+            <div class="grid active" id="apps">
+                <div class="card">
+                    <img src="~/Images/content/samrt-water-metering.jpg" alt="s">
+                    <p>Smart Water Metering</p>
+                </div>
+                <div class="card">
+                    <img src="~/Images/content/samrt-water-metering-system.jpg" alt="">
+                    <p> Smart Metering System overview</p>
+                </div>
+
+
+            </div>
+        </div>
+    </div>*@
+
+</section>
+
+<!--Project Experience & Industry Trust-->
+
+<section class="tabs-container">
+
+    <h3> With a strong portfolio of successful implementations, SCADA World Ltd. is trusted by both government bodies and leading private enterprises.</h3>
+
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+
+
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="government-projects-tab" data-bs-toggle="tab" data-bs-target="#government-projects"
+                    type="button" role="tab">
+                Government Projects
+            </button>
+        </li>
+
+
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="private-industrial-tab" data-bs-toggle="tab" data-bs-target="#private-industrial"
+                    type="button" role="tab">
+                Private & Industrial
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="wasa-project-tab" data-bs-toggle="tab" data-bs-target="#wasa-project"
+                    type="button" role="tab">
+                Wasa Project
+            </button>
+        </li>
+
+    </ul>
+
+    <div class="tab-content" id="myTabContent">
+
+        <div class="tab-pane fade show active" id="government-projects" role="tabpanel">
+            <div class="project-grid">
+                <div class="project-card">
+                    <img src="~/Images/content/WASA-450-Pump-Automation-and-SCADA.jpg" alt="">
+                    <div class="overlay">
+                        <h3>
+                            Bangladesh Ordnance Factory
+                        </h3>
+                        <p>
+                            Capacity Upgrading from 5MVA of BOF 33/11KV Sub-Station
+                        </p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="~/Images/Bashundhara-multifood-products.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Automotive</h3>
+                        <p>Energize and digitize your facility with expert solutions.</p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="~/Images/Bashundhara-multifood-products.jpg" alt="">
+                    <div class="overlay">
+                        <h3>Automotive</h3>
+                        <p>Energize and digitize your facility with expert solutions.</p>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="tab-pane fade" id="private-industrial" role="tabpanel">
+            <div class="project-grid">
+                <div class="project-card">
+                    <img src="~/Images/content/bashundhara-multi-food.JPG" alt="">
+
+                    <div class="overlay">
+                        <h3>Bashundhara Multifood</h3>
+                        <p>
+                            5000  LT Switchgear- 08 Set 1200 KV R
+                            PFI- 08 Set Motor Control Panel- 08 Set
+                        </p>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <img src="~/Images/content/Minister-Hitech.jpg" alt="">
+                    <div class="overlay">
+                        <h3>
+                            Walton Hi-Tech Industries Ltd.
+
+                        </h3>
+                        <p>11KV RMU, 6300A, LT Switchgear, 2x1900</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="wasa-project" role="tabpanel">
+            <div class="project-card">
+                <img src="~/Images/content/WASA-450-Pump-Automation-and-SCADA.jpg" alt="">
+                <div class="overlay">
+                    <h3>Pump Automation</h3>
+                    <p>We Deploy in WASA 450 Pump Automation</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</section>

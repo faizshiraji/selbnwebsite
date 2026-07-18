@@ -1,0 +1,752 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+
+}
+
+@section customHeader{
+    <style>
+
+        .about-extra {
+            margin-top: 40px;
+            padding: 0px 200px;
+            text-align: justify;
+            color: #4b5563;
+            line-height: 1.7;
+        }
+
+        .trusted-section {
+            background-color: #f3f4f6;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .trusted-text {
+            color: #000000;
+            opacity: 0.5;
+            font-size: 15px;
+            margin-bottom: 40px;
+        }
+
+        .trusted-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 80px;
+            flex-wrap: wrap;
+        }
+
+            .trusted-logos img {
+                height: 64px;
+                opacity: 0.5;
+                filter: grayscale(50%) brightness(0.2);
+                transition: all 0.3s ease;
+            }
+
+                .trusted-logos img:hover {
+                    opacity: 1;
+                    filter: grayscale(0%) brightness(1);
+                    transform: scale(1.05);
+                }
+
+
+        @@media (max-width: 768px) {
+            .trusted-logos {
+                gap: 40px;
+            }
+
+            .about-extra {
+                margin-top: 40px;
+                padding: 0px 20px;
+                text-align: justify;
+                color: #4b5563;
+                line-height: 1.7;
+            }
+        }
+    </style>
+
+}
+
+
+
+@section Schema{
+
+    <script type="application/ld+json">
+{
+  "@@context":"https://schema.org",
+  "@@type":"WebSite",
+  "name":"System Engineering Limited",
+  "url":"https://selbn.com"
+}
+    </script>
+
+}
+
+
+
+
+
+
+
+
+
+
+
+<header class="masthead">
+    <div class="container">
+        <div class="masthead-heading text-uppercase" style="color: #C6E332; font-size:42px ">(This Website is Under  Development)</div>
+
+        <div class="masthead-subheading">Welcome To System Engineering Limited</div>
+        <div class="masthead-heading text-uppercase">Always With Our Customer</div>
+
+    </div>
+</header>
+
+
+<!-- Chairmean Massage -->
+<section class="about-section" id="about">
+
+
+    <div class="about-container">
+
+        <!-- Left Content -->
+        <div class="about-content col-md-6">
+            <h2>Message From the Chairman</h2>
+            <span class="line"></span>
+
+            <p style="color:black">
+                <strong>Our reputation has been created not only by the contribution of our staff & valuable customers but also a big hand of our partners who are providing us a good quality/technology & products. </strong>
+            </p>
+
+        </div>
+
+
+        <!-- Right Image -->
+        <div class="about-image">
+            <img src="~/Images/chairman-photo.JPG" alt="Company Facility">
+        </div>
+
+    </div>
+
+    <div class="about-extra">
+        <p style="color:black">
+            <strong>System Engineering Ltd.</strong>offers 25 years of experience across a range of Quality Product & services in the industrial sector of Bangladesh. We promote our .best commitment & technology to our client in a cost effective way. We believe that latest technology is the key factor for developing industrial sector that we always try to provide to our customers. Customer satisfaction is our first objective. A total 450+ staff are working in this organization with full dedication & commitment. I believe, without these staffs contribution SEL could not stand in these positions. In future we are looking forward to Sustainable and innovative technology for our customers which will create a positive impact & a cost effective technology for the next aecade to industrial sectors.
+            Our reputation has been cr.eated not only by the contribution of our staff and valuable customer .but also a big hand of our partners who are providing us good quality/technology products. At the same time our valuable customer's faith has brought us in this stage.
+        </p>
+
+        <p style="color:black">
+            Finally, I should say we are engineer, designer, consultant, project implementer but above all we are a team dedicated to delivering a smart out comes for our clients, to the community and future generation.
+        </p>
+    </div>
+
+
+</section>
+
+<!--Associate companies-->
+<!--<section class="page-section" id="services">
+    <div class="container">
+        <div class="text-center">
+            <h1>System Engineering Limited Associate Companies.</h1>
+            <p class="trusted-text" style="font-size:20px">
+
+            </p>
+        </div>
+
+        <div class="service-grid">-->
+<!-- Card 1 -->
+<!--<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="~/Images/animated-icon/SCADA.gif" alt="SCADA">
+            <div class="trusted-logos">
+                <p style="text-align: center;">
+                    <img src="~/Images/Logo/sel-logo.png" alt="scada" style="display: block; margin: 0 auto;" />
+                    <span>SCADA World Ltd.</span>
+                </p>
+            </div>
+        </div>
+        <div class="flip-card-back">
+            <p>
+                The latest SCADA Solution From System Engineering Ltd. is designed to montior and control process in real time using Simatic Wincc SCADA Platform.
+            </p>
+
+        </div>
+    </div>
+</div>-->
+<!-- Card 2 -->
+<!--<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="~/Images/animated-icon/bearing_rwl.gif" alt="SCADA">
+            <div class="trusted-logos">
+                <p style="text-align: center;">
+                    <img src="~/Images/Logo/rwl-logo.png" alt="rotation" style="display: block; margin: 0 auto;">
+                    <span>Rotation World Ltd.</span>
+                </p>
+            </div>
+        </div>
+        <div class="flip-card-back">
+            <p>
+                Rotation World Ltd. is part of The System Engineering Ltd.’s growing portfolio of engineered bearings, belts, textile humidification system, textile machinery and industrial motion products.
+            </p>
+            <a href="https://www.rwlbd.com/" class="service-btn">More</a>
+        </div>
+    </div>
+</div>-->
+<!-- Card 3 -->
+<!--<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="~/Images/animated-icon/light.gif" alt="SCADA">
+            <div class="trusted-logos">
+                <p style="text-align: center;">
+                    <img src="~/Images/Logo/sel-logo.png" alt="LPM" style="display: block; margin: 0 auto;" />
+                    <span>Lighting Power Managemnet Ltd.</span>
+                </p>
+            </div>
+        </div>
+        <div class="flip-card-back">
+            <p>
+                Lighting control and aoutomation, power quality development, power transfaar through bus bar trunkey system and total electrical trunkey solution.
+            </p>
+
+        </div>
+    </div>
+</div>-->
+<!-- Card 5 -->
+<!--<div class="flip-card">
+    <div class="flip-card-inner">
+        <div class="flip-card-front">
+            <img src="~/Images/animated-icon/light3.gif">
+
+            <div class="trusted-logos">
+                <p style="text-align: center;">
+                    <img src="~/Images/Logo/influx-logo.png" alt="influx" style="display: block; margin: 0 auto;">
+                    <span>Influx Technology Ltd.</span>
+                </p>
+
+            </div>
+        </div>
+        <div class="flip-card-back">
+            <p>
+                Discover excellence with Influx Technology LTD. We specialize in manufacturing, assembling & supplying high-quality switches, sockets & lighting solutions.
+            </p>
+            <a href="https://www.influxbn.com/" class="service-btn">More</a>
+        </div>
+    </div>
+</div>-->
+<!-- Card 6 -->
+<!--<div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="~/Images/animated-icon/transformers.gif" alt="SCADA">
+                        <div class="trusted-logos">
+                            <p style="text-align: center;">
+                                <img src="~/Images/Logo/sel-logo.png" alt="scada" style="display: block; margin: 0 auto;" />
+                                <span>Universe Engineering Ltd.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>
+
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>-->
+
+
+
+<section style="margin:0; padding:5px 0" ;>
+    <div class="trusted-section">
+        <p class="trusted-text" style="font-size:20px">
+            System Engineering Limited Associate Companies.
+        </p>
+        <div class="trusted-logos">
+
+
+            <p style="text-align: center;">
+                <img src="~/Images/Logo/sel-logo.png" alt="scada" style="display: block; margin: 0 auto;" />
+                <span>SCADA World Ltd.</span>
+            </p>
+            <p style="text-align: center;">
+                <a href="https://salinspection.com/"><img src="~/Images/Logo/SAL.png" alt="sal" style="display: block; margin: 0 auto;"> </a>
+                <span>SAL Inspection Ltd.</span>
+            </p>
+
+            <p style="text-align: center;">
+                <a href="https://www.rwlbd.com/"> <img src="~/Images/Logo/rwl-logo.png" alt="rotation" style="display: block; margin: 0 auto;"> </a>
+                <span>Rotation World Ltd.</span>
+            </p>
+
+            <p style="text-align: center;">
+                <img src="~/Images/Logo/sel-logo.png" alt="LPM" style="display: block; margin: 0 auto;" />
+                <span>Lighting Power Managemnet</span>
+            </p>
+
+            <p style="text-align: center;">
+                <a href="https://www.influxbn.com/"> <img src="~/Images/Logo/influx-logo.png" alt="influx" style="display: block; margin: 0 auto;"></a>
+                <span>Influx Technology Ltd.</span>
+            </p>
+
+            <p style="text-align: center;">
+                <img src="~/Images/Logo/sel-logo.png" alt="universe" style="display: block; margin: 0 auto;" />
+                <span>Universe Technology Ltd.</span>
+            </p>
+
+        </div>
+    </div>
+</section>
+
+<!-- Service & Solution-->
+<section class="page-section" id="services">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">Service & Solution</h2>
+            <p class="section-subheading text-muted">
+                Smart, reliable, and future-ready solutions tailored for modern industries
+            </p>
+        </div>
+
+        <div class="service-grid">
+
+            <!-- Card 1 -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="~/Images/animated-icon/electro.gif" alt="Electro Mechanical">
+                        <h4>Electro-Mechanical</h4>
+
+
+                    </div>
+                    <div class="flip-card-back">
+                        <p>
+                            We provide reliable electro-mechanical system solutions, integrating electrical and mechanical technologies for efficient and automated operations.
+                            Our services ensure high performance, safety, and long-term reliability for industrial and commercial applications.
+                        </p>
+                        @*<a href="#" class="service-btn">More</a>*@
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="~/Images/animated-icon/industrial.gif" alt="Industrial Automation">
+                        <h4>Industrial Automation</h4>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>
+                            We deliver advanced industrial automation solutions to optimize processes, improve efficiency, and reduce operational costs.
+                            Our systems ensure seamless, reliable, and smart control for modern industries.
+                        </p>
+                        @*<a href="#" class="service-btn">Learn More</a>*@
+                    </div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="~/Images/animated-icon/SCADA.gif" alt="SCADA">
+                        <h4>SCADA</h4>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>
+                            SCADA is an advanced system used to monitor, control, and analyze industrial processes in real time.
+                            It enables centralized supervision of equipment, improves operational efficiency,
+                            enhances safety, and supports data-driven decision-making across industries
+                        </p>
+                        @*<a href="#" class="service-btn">Learn More</a>*@
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Card 4 -->
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="~/Images/animated-icon/marketing.gif" alt="Digitalization">
+                        <h4>Marketing  strategy</h4>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>
+                            SEL targets industrial and infrastructure sectors by identifying client needs and delivering reliable, standards-compliant solutions.
+                            We emphasize long-term relationships through customized services, responsive support, and consistent client engagement.
+                        </p>
+                        @*<a href="#" class="service-btn">Learn More</a>*@
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- About-->
+<section class="about-section" id="about">
+
+
+    <div class="about-container">
+
+        <!-- Left Image -->
+        <div class="about-image">
+            <img src="~/Images/totgethar-photo.jpg" alt="Company Facility">
+        </div>
+
+        <!-- Right Content -->
+        <div class="about-content col-md-6">
+            <h2>ABOUT US</h2>
+            <span class="line"></span>
+
+            <p>
+                <strong>System Engineering Ltd. </strong> is one of the most reputed organizations in Bangladesh for different kind of Industrial Automation works, Electro-Mechanical & Electrical Engineering works, Plant Erection & maintenance, Lighting Automation, Energy Management, Power Distribution,
+                Transmission & Man-Machine Customization etc. Its objective is to help to make maximum return from systems. It has self-supported expertise technical teams with modern tools & technology.
+            </p>
+
+            <p>
+                <strong>System Engineering Ltd.</strong> is authorized sole-agent of some world-class manufacturers in Bangladesh. SEL has selected these companies for their high quality products with justified price for Bangladesh.
+                SEL thinks, high quality products & services are the most important factors to our industrial sector for developing our country.
+            </p>
+
+
+
+            @*<a href="" class="about-btn">
+                    <img src="~/Images/animated-icon/youtube.gif" alt="YouTube" class="yt-gif">
+                    ABOUT COMPANY
+                </a>*@
+        </div>
+
+    </div>
+
+
+
+</section>
+
+
+<!--Associated companies-->
+
+
+
+<section class="page-section bg-light" id="associate">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">Associate Companies</h2>
+            <h3 class="section-subheading text-muted">
+                System Engineering Limited has 6 Sister Companies
+            </h3>
+        </div>
+
+
+        <div class="container my-5">
+            <div class="row align-items-center">
+
+                <!-- LEFT IMAGE -->
+                <div class="col-lg-5 col-sm-12 mb-4">
+                    <div class="about-image-accosiation">
+                        <img src="~/Images/SEL_Building.jpg" alt="System Engineering Limitted" class="img-fluid">
+                    </div>
+                </div>
+
+                <!-- RIGHT CARD -->
+                <div class="col-lg-7 col-sm-12">
+                    <div class="association-card">
+                        <ul>
+                            <li>
+                                <img src="~/Images/Logo/sel-logo.png">
+                                <span>SCADA</span>
+                            </li>
+                            <li>
+                                <img src="~/Images/Logo/SAL.png">
+                                <span>SAL Inspection</span>
+                            </li>
+                            <li>
+                                <img src="~/Images/Logo/rwl-logo.png">
+                                <span>Rotation World</span>
+                            </li>
+                            <li>
+                                <img src="~/Images/Logo/sel-logo.png">
+                                <span>Lighting Power Management</span>
+                            </li>
+                            <li>
+                                <img src="~/Images/Logo/influx-logo.png">
+                                <span>Influx Technology Ltd.</span>
+                            </li>
+                            <li>
+                                <img src="~/Images/Logo/sel-logo.png">
+                                <span>Universe Engineering Ltd.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+</section>
+
+
+<!-- Project sectioin-->
+
+
+<section class="projects-section" id="projects">
+    <div class="projects-container">
+
+        <h2 class="projects-title">OUR PROJECTS</h2>
+        <span class="projects-line"></span>
+
+        <div class="projects-grid">
+
+            <!-- Project Card -->
+            <div class="project-card">
+                <img src="~/Images/coca-cola-substaion.jpg" alt="">
+                <div class="project-overlay">
+                    <h4>Coca-Cola Substation</h4>
+                    <p>
+                        Sub Station Works,
+                        Distribution Panel Works,
+                        Plumbing Works,
+                        Mechanical Works
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="project-card">
+                <img src="~/Images/project_division_picture_SEL.jpg" alt="">
+                <div class="project-overlay">
+                    <h4>PROJECT DIVISION</h4>
+                    <p>Electrical Infrastructure</p>
+                </div>
+            </div>
+
+
+            <div class="project-card">
+                <img src="~/Images/water_management_system_distribution_system.jpg" alt="">
+                <div class="project-overlay">
+                    <h4>Water Management System</h4>
+                    <p>SCADA automation pump water flow project</p>
+                </div>
+            </div>
+
+
+            <div class="project-card">
+                <img src="~/Images/Walton-substation-works.jpg" alt="">
+                <div class="project-overlay">
+                    <h4>Walton Substation</h4>
+                    <p>Distribution Panel Works</p>
+                </div>
+            </div>
+
+
+            <div class="project-card">
+                <img src="~/Images/opsonin-pharma-substation-project.jpg" alt="">
+                <div class="project-overlay">
+                    <h4>Opsonin Pharma Ltd</h4>
+                    <p>Supply, Installation, Testing & Commissioning of 20/28 MVA, 33/11KV Sub-Station. </p>
+                </div>
+            </div>
+
+
+            <div class="project-card">
+                <img src="~/Images/jotun-mechanical-project.jpg" alt="">
+                <div class="project-overlay">
+                    <h4>Jotun PROJECT</h4>
+                    <p>Mechanical Works</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="~/Images/Bashundhara-multifood-products.jpg" alt="">
+                <div class="project-overlay">
+                    <h4>Bashundhara Multi-Food Products Ltd.</h4>
+                    <p>Design, Supply, Installation, Testing & Commissioning of Sub-Station at Keranigonj-Dhaka</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="~/Images/lighting-work-epg-project.jpg" alt="">
+                <div class="project-overlay">
+                    <h4>EPG Project</h4>
+                    <p>Lighting works</p>
+                </div>
+            </div>
+
+
+        </div>
+
+        @*<a href="#" class="projects-btn">» MORE PROJECTS</a>*@
+
+    </div>
+</section>
+
+
+
+
+<!-- Press & Media-->
+<section class="press-section" id="press">
+    <div class="press-container">
+
+        <h2 class="press-title">PRESS & MEDIA</h2>
+        <span class="press-line"></span>
+
+        <div class="press-slider-wrapper">
+
+            <!-- Prev Button -->
+            <button class="nav-btn prev" onclick="slidePress(-1)">‹</button>
+
+            <!-- Slider -->
+            <div class="press-slider" id="pressSlider">
+
+                <!-- Card -->
+
+                <div class="press-card">
+                    <div class="press-image">
+                        <span class="press-date">29<br><small>April 2026</small></span>
+                        <img src="~/Images/BKTG.jpg">
+                    </div>
+                    <div class="press-content">
+                        <p> <strong>BTKG FAIR- 2026 |ICCB, Dhaka </strong></p>
+                        <p>Team System Engineering Ltd. at Hall 04, Stall 101, showcasing our commitment to excellence in engineering solutions.</p>
+                    </div>
+                </div>
+
+                <div class="press-card">
+                    <div class="press-image">
+                        <span class="press-date">20<br><small>April 2026</small></span>
+                        <img src="~/Images/contract_sign_Asian_woman.jpg">
+                    </div>
+                    <div class="press-content">
+                        <p> <strong> Asian University for Women (AUW) contract agreement signing</strong></p>
+                        <p>We are pleased to announce the successful contract agreement signing between Asian University for Women (AUW) and System Engineering Ltd. (SEL) for the development of a 5MW or (2 × 3150 kVA) Substation, Diesel Generator, along with associated MEP and Civil Works at the AUW Permanent Campus in Chittagong.</p>
+                    </div>
+                </div>
+
+                <div class="press-card">
+                    <div class="press-image">
+                        <span class="press-date">22<br><small>FEB 2025</small></span>
+                        <img src="~/Images/DTG-2025_4.jpg">
+                    </div>
+                    <div class="press-content">
+                        <p> <strong> SYSTEM ENGINEERING Ltd. at DTG Toxtile & Garment Expo!</strong></p>
+                        <p> Here we showcase cutting-edge systems and solutions for the textile and garment industry. Our expert team is ready to demonstrate our innovative products and services designed to optimize efficiency, sustainability, and productivity.</p>
+                    </div>
+                </div>
+
+                <div class="press-card">
+                    <div class="press-image">
+                        <span class="press-date">16<br><small>JAN 2025</small></span>
+                        <img src="~/Images/MVD-Inverter-Era.jpg">
+                    </div>
+                    <div class="press-content">
+                        <p><strong>System Engineering Limited Enters the MVD Inverter Era </strong></p>
+                        <p>We are thrilled to announce a major milestone in our journey of innovation and excellence! System Engineering Limited has officially entered the era of MVD inverters, setting a new benchmark in advanced engineering solutions.</p>
+                    </div>
+                </div>
+
+
+                <div class="press-card">
+                    <div class="press-image">
+                        <span class="press-date">25<br><small>MAY 2023</small></span>
+                        <img src="~/Images/Dhaka-Wasa-Prize.jpg">
+                    </div>
+                    <div class="press-content">
+                        <p><strong> Water Innovation Challange: HouseHold</strong> </p>
+                        <p>The Water Innovation Challenge, involving Dhaka WASA, was a 2021 competition seeking ICT solutions for water conservation and management, with partners Unilever Pureit, a2i aiming to reduce water loss and promote reuse. While System Engineering Ltd. involved in large-scale projects like surface water treatment (Padma River) and digital transformation to modernize Dhaka's water system and tackle groundwater depletion. </p>
+                    </div>
+                </div>
+
+                <div class="press-card">
+                    <div class="press-image">
+                        <span class="press-date">25<br><small>MAY 2023</small></span>
+                        <img src="~/Images//SEL-AMI-Dhaka-Wasa.jpg">
+                    </div>
+                    <div class="press-content">
+                        <p><strong>Water Innovation Challange: HouseHold </strong></p>
+                        <p> System Engineering Ltd. appears to be a key local partner or contractor for DWASA's modernization, implementing advanced tech like pressure control valves, flow meters (Cla-Val), and digital asset management systems.</p>
+                    </div>
+                </div>
+
+                <div class="press-card">
+                    <div class="press-image">
+                        <span class="press-date">12<br><small>JAN 2023</small></span>
+                        <img src="~/Images/mostakim-project-signing.jpg">
+                    </div>
+                    <div class="press-content">
+                        <p>Project signing </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Next Button -->
+            <button class="nav-btn next" onclick="slidePress(1)">›</button>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Clients-->
+<section class="clients-section" id="projects">
+    <div class="clients-container">
+
+        <h2 class="clients-title">Our Clients</h2>
+
+        <div class="clients-grid">
+
+            <a class="client-card">
+                <img src="~/Images/Clients_logo/rajshai-wasa.png" alt="Coca-Cola Substation">
+            </a>
+
+            <a class="client-card">
+                <img src="~/Images/Clients_logo/walton.png" alt="Project Division">
+            </a>
+
+
+            <a class="client-card">
+                <img src="~/Images/Clients_logo/BDPL.png" alt="Water Management System">
+            </a>
+
+
+            <a class="client-card">
+                <img src="~/Images/Clients_logo/desco.png" alt="Walton Substation">
+            </a>
+
+            <a class="client-card">
+                <img src="~/Images/Clients_logo/wasa.png" alt="Opsonin Pharma">
+            </a>
+
+            <a class="client-card">
+                <img src="~/Images/Clients_logo/BREB.png" alt="Jotun Project">
+            </a>
+
+            <a class="client-card">
+                <img src="~/Images/Clients_logo/BOF.png" alt="Bashundhara">
+            </a>
+
+            <a class="client-card">
+                <img src="~/Images/Clients_logo/DPDC.png" alt="EPG Project">
+            </a>
+
+        </div>
+
+        <a href="http://selbn.com/OurClients/Automation" class="clients-btn">» MORE</a>
+
+    </div>
+</section>
+
+
+@section customScripts
+{
+
+    <script src="~/Template/agency/dist/js/slider.js"></script>
+
+}
+

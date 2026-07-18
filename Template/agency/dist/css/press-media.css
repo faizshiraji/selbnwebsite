@@ -1,0 +1,113 @@
+.press-section {
+    padding: 80px 0;
+    background: #fff;
+}
+
+.press-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.press-title {
+    font-size: 36px;
+    letter-spacing: 2px;
+}
+
+.press-line {
+    width: 50px;
+    height: 2px;
+    background: #6b0030;
+    display: block;
+    margin: 15px auto 40px;
+}
+
+/* Slider wrapper */
+.press-slider-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Slider */
+.press-slider {
+    display: flex;
+    gap: 25px;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Card */
+.press-card {
+    min-width: calc(33.333% - 16px);
+    border: 1px solid #eee;
+    background: #fff;
+}
+
+/* Image */
+.press-image {
+    position: relative;
+    overflow: hidden;
+}
+
+    .press-image img {
+        width: 100%;
+        height: 240px;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+    }
+
+    /* Hover only image */
+    .press-image:hover img {
+        transform: scale(1.1);
+    }
+
+
+.press-date {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    padding: 8px 12px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+    .press-date small {
+        display: block;
+        font-size: 12px;
+    }
+
+
+.press-content {
+    padding: 22px;
+    text-align: left;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+
+.nav-btn {
+    background: #0C97E8;
+    color: #fff;
+    border: none;
+    width: 60px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+    .nav-btn:hover {
+        background: #045D8A;
+    }
+
+
+@media (max-width: 992px) {
+    .press-card {
+        min-width: 100%;
+    }
+}
+

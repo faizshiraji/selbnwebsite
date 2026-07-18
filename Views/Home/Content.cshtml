@@ -1,0 +1,38 @@
+﻿@{
+    PageContent p = new PageContent();
+
+    try
+    {
+        p = ViewBag.Data;
+    }
+    catch (Exception ex)
+    {
+
+    }
+    ViewBag.Title = p.Title;
+}
+
+@section customCSS
+{
+    @Html.Raw(ViewBag.CustomCSS)
+    @*@Html.Raw(p.CustomCSS)*@
+}
+
+@section Schema{
+
+    @Html.Raw(p.MetaDescription)
+}
+
+<!-- Masthead-->
+<header class="masthead">
+<div class="container">
+@*<div class="masthead-subheading">Welcome To SEL</div>*@
+<div class="masthead-heading text-uppercase">@p.Title</div>
+@*<a class="btn btn-primary btn-xl text-uppercase" href="#services">Tell Me More</a>*@
+</div>
+</header>
+
+@*@Html.Raw(p.Description)*@
+
+
+@Html.Raw(ViewBag.HtmlData)
